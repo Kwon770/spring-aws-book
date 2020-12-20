@@ -7,7 +7,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class HelloResponseDtoTest {
 
     @Test
-    public void testLombokFunction() {
+    public void test_LombokFunction() {
         String name = "test";
         int amount = 1000;
 
