@@ -7,6 +7,28 @@
             <a href="/posts/save" role="button" class="btn btn-primary">Upload</a>
         </div>
     </div>
+    <br>
+    <!-- Area for list -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>PostNumber</th>
+            <th>Title</th>
+            <th>Writer</th>
+            <th>ModifiedDate</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
 </div>
 
 {{>layout/footer}}
