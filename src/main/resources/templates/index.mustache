@@ -12,17 +12,17 @@
     <table class="table table-horizontal table-bordered">
         <thead class="thead-strong">
         <tr>
-            <th>PostNumber</th>
+            <th>Post Number</th>
             <th>Title</th>
             <th>Writer</th>
-            <th>ModifiedDate</th>
+            <th>Modified Date</th>
         </tr>
         </thead>
         <tbody id="tbody">
         {{#posts}}
             <tr>
                 <td>{{id}}</td>
-                <td>{{title}}</td>
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
                 <td>{{author}}</td>
                 <td>{{modifiedDate}}</td>
             </tr>

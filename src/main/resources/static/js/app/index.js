@@ -1,8 +1,13 @@
 const main = {
     init : function () {
         const _this = this;
+
         $('#btn-save').on('click', function () {
             _this.save();
+        });
+
+        $('#btn-update').on('click', function () {
+            _this.update();
         });
     },
 
@@ -25,6 +30,28 @@ const main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         })
+    },
+
+    update: function () {
+        const data = {
+            title: $('#title').val(),
+            content: $('#content').val()
+        };
+
+        const id = $('#id').val();
+
+        $.ajax({
+            type: 'PUT',
+            url: '/api/v1/posts/' + id,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data)
+        }).done(function () {
+            alert('The post is modified');
+            window.location.href = '/';
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        });
     }
 }
 
