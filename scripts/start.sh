@@ -7,6 +7,10 @@ source ${ABSDIR}/profile.sh
 REPOSITORY=/home/ec2-user/app/step3
 PROJECT_NAME=spring-aws-book
 
+echo "> Build 파일 복사"
+echo "> cp $REPOSITORY/zip/*.jar $REPOSITORY/"
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
+
 echo "> 새 애플리케이션 배포"
 JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
 
